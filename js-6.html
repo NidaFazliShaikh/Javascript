@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         body {
+            text-align: center;
+            background-color: bisque;
+        }
+
+        button {
+            color: white;
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2> Javascript program to manipulate an Array of Strings</h2>
+    <button type="button" onclick="myFunc()">Click Me!</button>
+
+    <script>
+        function myFunc() {
+            let names = ["John","Jane","Doe","Alice","Bob"];
+
+            console.log(names.join('\r\n'));
+
+            names.push("Eve")
+            console.log(names);
+
+            const nameToRemove = "Doe";
+            const updatedNames = names.filter(name => name !== nameToRemove);
+            console.log(updatedNames); 
+
+            names.sort()
+            console.log(names);
+
+            if(names.includes("Alice")) {
+                console.log("Alice is present")
+            }
+            else {
+                console.log("Alice is not present")
+            }
+
+            let uppercaseNames = names.map(name => name.toUpperCase());
+
+            console.log(uppercaseNames);  
+        }
+    </script>
+</body>
+</html>
