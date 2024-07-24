@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+    <style>
+        body {
+            background-color: antiquewhite;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            color: white;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h2>Conditional and Looping statements</h2>
+    <button type="button" onclick="myFunc()">Click Me!</button>
+    
+    <script>
+          function myFunc() {
+        // if condition
+            let num = 10;
+            if(num > 0) {
+                console.log("number is positive")
+            }
+
+        // if else condition
+            let num2 = -5
+            if(num2 > 0) {
+                console.log("number is positive")
+            }
+            else {
+                console.log("number is negative")
+            }
+
+        // if else if else condition
+            let num3 = -5
+            if(num3 > 0) {
+                console.log("number is positive")
+            }
+            else if(num3 == 0) {
+                console.log("number is zero")
+            }
+            else {
+                console.log("number is negative")
+            }
+
+        // switch and break statements
+            let day = "Monday"
+            switch(day) {
+                case "Monday" :
+                    console.log("Today is Monday")
+                    break
+                case "Tuesday" :
+                    console.log("Today is Tuesday")
+                    break
+                default :
+                    console.log("Today is neither Monday nor Tuesday")
+            }
+
+        // for loop
+            for(let i=0; i<5; i++) {
+                console.log(i)
+            }
+
+        // for/in
+            const details = {company_name:"Ultimez", course:"JS"}
+            for(const key in details) {
+                console.log(key + " : " + details[key])
+            }
+
+        // for/of
+            const colors = ["red","green","blue"]
+            for(const eachColor of colors) {
+                console.log(eachColor)
+            }
+
+        // while loop
+            let count = 0;
+            while(count < 3) {
+                console.log(count)
+                count++
+            }
+
+        // do/while loop
+            let num4 = 0
+            do {
+                console.log(num)
+                num4++
+            }
+            while(num < 3)
+        } 
+    </script>
+</body>
+</html>
