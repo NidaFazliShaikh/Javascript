@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+</head>
+<body>
+    <h2 style="text-align: center;"> Functions </h2>
+    
+    <script>
+        function reverseString(str) {
+            return str.split('').reverse().join('');
+        }
+            console.log(reverseString("hello")); 
+
+
+        // using built-in functions and return the reversed string and use different input strings
+        function reverseString(str) {
+
+        // Split the string into an array of characters
+            let charArray = str.split('');
+
+        // Reverse the array
+            let reversedArray = charArray.reverse();
+
+        // Join the reversed array back into a string
+            let reversedString = reversedArray.join('');
+
+        // Return the reversed string
+            return reversedString;
+        }
+        
+        console.log(reverseString("world")); 
+    </script>
+</body>
+</html>
