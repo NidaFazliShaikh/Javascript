@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    
+    <style>
+        body {
+            background-color: indianred;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            color: white;
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2> Dates and Regex </h2>
+    <button type="button" onclick="myFunc()">Click Me!</button>
+
+    <script>
+        // to get current date
+        function myFunc() {
+            const currentDate = new Date();
+            console.log(currentDate);
+
+        // for specific date and time
+            const specificDate = new Date('2024-4-15T012:00:00');
+            console.log(specificDate);
+
+        // using millisecs since unix epoch
+            const usingMS = new Date('1619743440000');
+            console.log(usingMS);
+
+        // to access new date component
+            const date = new Date();
+            console.log(date);
+
+        // to get year
+            const year = date.getFullYear();
+            console.log(year);
+
+        // to get month
+            const month = date.getMonth();
+            console.log(month);
+
+        // to get hours
+            const hours = date.getHours();
+            console.log(hours);
+
+        // to get minute
+            const minutes = date.getMinutes();
+            console.log(minutes);
+
+        // to get seconds
+            const seconds = date.getSeconds();
+            console.log(seconds);
+
+        // to get milliseconds
+            const millisec = date.getMilliseconds();
+            console.log(millisec);
+
+        // to format dates into string
+            const formattedDate = date.toLocaleString('en-US');
+            console.log(formattedDate);
+
+        // to manipulate dates -> to get 7 days added
+            date.setDate(date.getDate() + 7);
+            console.log(date);
+
+        // compare dates
+            const date1 = new Date('2024-4-15');
+            const date2 = new Date('2024-5-15');
+
+            if(date1 < date2) {
+                console.log("date 1 is earlier than date 2")
+            }
+
+
+        // Regex
+        // testing string
+            let pattern = /dog/
+            let string = "I have a dog and his name is stuffy"
+            console.log(pattern.test(string));
+
+        // matching string
+            let pattern1 = /\b[Cc]\w+/g
+            let string1 = "Cat and dog are animals. cow is also animal"
+            console.log(string1.match(pattern1));
+
+         // testing email is true or false
+            let pattern2 = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+            let string2 = "myemail@ultimez22.com"
+            console.log(pattern2.test(string2))
+        }
+    </script>
+</body>
+</html>
