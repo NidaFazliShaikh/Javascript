@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            color: white;
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h2>Objects, Sets and Maps</h2>
+    <button type="button" onclick="myFunc()">Click Me!</button>
+
+    <script>
+        function myFunc() {
+            var data = {
+                Name : "Bob",
+                Age : "20",
+                Gender : "Male",
+                Occupation : "Pilot",
+                fullname : function() {
+                    return this.Name +" "+ this.Age +" "+ this.Gender +" "+ this.Occupation;
+                }
+            }
+            console.log(data.Name);
+            console.log(data.Age);
+            console.log(data.Gender);
+            console.log(data.Occupation);
+
+            var data = {
+                Name : "Annie",
+                Age : "24",
+                Gender : "Female",
+                Occupation : "Engineer",
+                fullname : function() {
+                    return this.Name +" "+ this.Age +" "+ this.Gender +" "+ this.Occupation;
+                }
+            }
+            console.log(data.Name);
+            console.log(data.Age);
+            console.log(data.Gender);
+            console.log(data.Occupation);
+
+
+            function getUniqueNumbers(numbersArray) {
+            return new Set(numbersArray);
+            }
+            const numbers = [1, 2, 2, 3, 4, 4, 5];
+            const uniqueNumbers = getUniqueNumbers(numbers);
+            console.log(uniqueNumbers); 
+
+
+            const array1 = [1, 2, 3, 4];
+            const array2 = [3, 4, 5, 6];
+            const unionArray = [...new Set([...array1, ...array2])];
+            console.log(unionArray); 
+
+ 
+            const intersectionArray = array1.filter(item => array2.includes(item));
+            console.log(intersectionArray);
+
+
+            function difference(array1, array2) {
+            return array1.filter(item => !array2.includes(item));
+            }
+            const differenceArray = difference(array1, array2);
+            console.log(differenceArray); 
+
+
+            function isSubset(array1, array2) {
+            return array1.every(item => array2.includes(item));
+            }
+            const result = isSubset(array1, array2);
+            console.log(result); 
+
+
+            var data1 = new Map([
+                ["apples", 300],
+                ["mango",500],
+                ["banana",100]
+            ])
+            console.log(data1);
+
+            data1.set("orange",500);
+            console.log(data1);
+
+            data1.delete("mango",500);
+            console.log(data1);
+          }
+    </script>
+</body>
+</html>
